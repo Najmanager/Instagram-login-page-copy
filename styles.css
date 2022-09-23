@@ -1,0 +1,254 @@
+:root {
+    --bg-color: rgb(250, 250, 250);
+    --btn-active:rgb(65, 147, 239);
+    --btn-notactiv: rgb(198, 222, 250);
+    --facebook: rgb(61, 80, 129);
+    --forgot-password:rgb(47, 77 ,121);
+    --s:rgb(134, 134, 134);
+    --border:rgb(219, 219, 219);
+    --or-color:rgb(143, 143, 143);
+    --focus: rgb(168, 168, 168);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: var(--bg-color);
+}
+
+img {
+    display: block;
+}
+
+.get-app img {
+    height: 40px;
+}
+
+.phone-overlay img {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px auto;
+}
+
+.logo {
+    height: 51px;
+    margin: 14px auto 35px;
+}
+
+input {
+    display: block;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    width: 75vw;
+    padding: 11px 8px;
+    font-size: 12px;
+    margin-inline: auto;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: var(--or-color);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--focus);
+}
+
+input:nth-of-type(1) {
+    margin-bottom: 5px;
+}
+
+.login {
+    display: block;
+    margin-top: 15px;
+    margin-inline: auto;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    width: 75vw;
+    background-color: var(--btn-notactiv);
+    border: none;
+    border-radius: 4px;
+}
+
+form:valid .login {
+    background-color: var(--btn-active);
+    cursor: pointer;
+}
+
+
+.separator {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--or-color);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 17px 15px 18px;
+}
+  
+.line {
+    height: 1px;
+    width: 40%;
+    background-color: #dbdbdb;
+}
+
+.login-w-facebook {
+    border: 0;
+    cursor: pointer;
+    color: #385185;
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+    text-decoration: none;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: var(--forgot-password);
+    line-height: 16px;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+.fb-icon {
+    color: #385185;
+    font-size: 17px;
+    padding-right: 5px;
+}
+
+.fb {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sign-up-option {
+    margin: 50px 0 35px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.sign-up-link {
+    color: #3897f0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.get-app {
+    text-align: center;
+}
+
+.get-app p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.imgs {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+    justify-content: center;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 85vw;
+    margin-inline: auto;
+    justify-content: center;
+}
+
+.footer-nav-item {
+    text-decoration: none;
+    color: var(--or-color);
+    font-size: 12px;
+    margin: 0 8px 10px;
+    cursor: pointer;
+}
+
+.long {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+.add_info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 52px;
+    margin-top: 12px;
+}
+
+.language,
+.copyright {
+    color: var(--or-color);
+    font-size: 12px;
+    margin: 0 8px 12px;
+}
+
+svg {
+    translate: 5px;
+    transform: translateY(10px);
+}
+
+@media (min-width: 450px) {
+    form {    
+        background-color: white; 
+        border: 1px solid var(--border);
+        padding: 30px 40px;
+        width: 72vw;
+        max-width: 374px;
+    }
+    
+    input,
+    .login {
+        width: 100%;
+    }
+
+    .sign-up-option {
+        background-color: white;
+        border: 1px solid var(--border);
+        padding: 20px;
+        margin: 10px auto 0;
+    }
+}
+
+@media (min-width: 880px) {
+    .phone-overlay img {
+        display: block;
+        margin-right: 32px;
+        width: 380px;
+        max-width: 380px;
+        height: 581px;
+    }
+
+    .footer-nav {
+        max-width: 65vw;
+    }
+
+    .long {
+        flex-basis: auto;
+    }
+}
